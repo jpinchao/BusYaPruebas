@@ -1,0 +1,248 @@
+body {
+	min-height: 100vh;
+	background-image: linear-gradient(56deg, rgba(254, 254, 254, 0.05) 0%, rgba(254, 254, 254, 0.05) 69%, rgba(160, 160, 160, 0.05) 69%, rgba(160, 160, 160, 0.05) 100%), linear-gradient(194deg, rgba(102, 102, 102, 0.02) 0%, rgba(102, 102, 102, 0.02) 60%, rgba(67, 67, 67, 0.02) 60%, rgba(67, 67, 67, 0.02) 100%), linear-gradient(76deg, rgba(169, 169, 169, 0.06) 0%, rgba(169, 169, 169, 0.06) 89%, rgba(189, 189, 189, 0.06) 89%, rgba(189, 189, 189, 0.06) 100%), linear-gradient(326deg, rgba(213, 213, 213, 0.04) 0%, rgba(213, 213, 213, 0.04) 45%, rgba(66, 66, 66, 0.04) 45%, rgba(66, 66, 66, 0.04) 100%), linear-gradient(183deg, rgba(223, 223, 223, 0.01) 0%, rgba(223, 223, 223, 0.01) 82%, rgba(28, 28, 28, 0.01) 82%, rgba(28, 28, 28, 0.01) 100%), linear-gradient(3deg, rgba(20, 20, 20, 0.06) 0%, rgba(20, 20, 20, 0.06) 62%, rgba(136, 136, 136, 0.06) 62%, rgba(136, 136, 136, 0.06) 100%), linear-gradient(200deg, rgba(206, 206, 206, 0.09) 0%, rgba(206, 206, 206, 0.09) 58%, rgba(6, 6, 6, 0.09) 58%, rgba(6, 6, 6, 0.09) 100%), linear-gradient(304deg, rgba(162, 162, 162, 0.07) 0%, rgba(162, 162, 162, 0.07) 27%, rgba(24, 24, 24, 0.07) 27%, rgba(24, 24, 24, 0.07) 100%), linear-gradient(186deg, rgba(166, 166, 166, 0.04) 0%, rgba(166, 166, 166, 0.04) 5%, rgba(210, 210, 210, 0.04) 5%, rgba(210, 210, 210, 0.04) 100%), linear-gradient(90deg, rgb(26, 118, 64), rgb(32, 207, 121), rgb(78, 196, 128));
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+	padding-top: 55px;
+	margin: 0;
+}
+
+main {
+	padding: 20px;
+}
+
+section {
+	margin-bottom: 20px;
+}
+
+section h2 {
+	margin-top: 0;
+}
+
+a:hover {
+	background-color: #444;
+}
+
+footer {
+	/*position: fixed;*/
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	padding: 5px;
+	background-color: #ccc;
+	text-align: center;
+}
+
+
+
+#contenedor {
+	width: 100%;
+	margin: auto;
+	padding: 20px;
+	background-image: linear-gradient(56deg, rgba(254, 254, 254, 0.05) 0%, rgba(254, 254, 254, 0.05) 69%, rgba(160, 160, 160, 0.05) 69%, rgba(160, 160, 160, 0.05) 100%), linear-gradient(194deg, rgba(102, 102, 102, 0.02) 0%, rgba(102, 102, 102, 0.02) 60%, rgba(67, 67, 67, 0.02) 60%, rgba(67, 67, 67, 0.02) 100%), linear-gradient(76deg, rgba(169, 169, 169, 0.06) 0%, rgba(169, 169, 169, 0.06) 89%, rgba(189, 189, 189, 0.06) 89%, rgba(189, 189, 189, 0.06) 100%), linear-gradient(326deg, rgba(213, 213, 213, 0.04) 0%, rgba(213, 213, 213, 0.04) 45%, rgba(66, 66, 66, 0.04) 45%, rgba(66, 66, 66, 0.04) 100%), linear-gradient(183deg, rgba(223, 223, 223, 0.01) 0%, rgba(223, 223, 223, 0.01) 82%, rgba(28, 28, 28, 0.01) 82%, rgba(28, 28, 28, 0.01) 100%), linear-gradient(3deg, rgba(20, 20, 20, 0.06) 0%, rgba(20, 20, 20, 0.06) 62%, rgba(136, 136, 136, 0.06) 62%, rgba(136, 136, 136, 0.06) 100%), linear-gradient(200deg, rgba(206, 206, 206, 0.09) 0%, rgba(206, 206, 206, 0.09) 58%, rgba(6, 6, 6, 0.09) 58%, rgba(6, 6, 6, 0.09) 100%), linear-gradient(304deg, rgba(162, 162, 162, 0.07) 0%, rgba(162, 162, 162, 0.07) 27%, rgba(24, 24, 24, 0.07) 27%, rgba(24, 24, 24, 0.07) 100%), linear-gradient(186deg, rgba(166, 166, 166, 0.04) 0%, rgba(166, 166, 166, 0.04) 5%, rgba(210, 210, 210, 0.04) 5%, rgba(210, 210, 210, 0.04) 100%), linear-gradient(90deg, rgb(26, 118, 64), rgb(32, 207, 121), rgb(78, 196, 128));
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+#formulario {
+	margin-bottom: 20px;
+}
+
+/*Slider metodos de pago*/
+
+#slider {
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+	position: relative;
+}
+
+#slider ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+#slider ul li {
+	display: block;
+	float: left;
+	width: 25%;
+	height: 100%;
+}
+
+#slider ul li img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider {
+	display: flex;
+	height: auto;
+	margin: auto;
+	overflow: hidden;
+	align-items: center;
+}
+
+.slider:before {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	content: "";
+	width: 23.958%;
+	height: 110px;
+	background: linear-gradient(-90deg, hsla(0, 0%, 96.9%, 0), #f7f7f7);
+}
+
+.slider:after {
+	position: absolute;
+	right: 0;
+	content: "";
+	width: 23.958%;
+	height: 110px;
+	background: linear-gradient(90deg,
+			hsla(0, 0%, 96.9%, 0),
+			hsla(0, 0%, 96.9%, 0.99) 99%);
+}
+
+.slider .slide-track {
+	display: flex;
+	animation: scroll 35s linear infinite;
+	-webkit-animation: scroll 35s linear infinite;
+	width: calc(240px * 10);
+}
+
+.slider .slide {
+	cursor: pointer;
+	width: 180px;
+	height: auto;
+	padding: 10px;
+	margin: 20px;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+		rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.slider .slide img {
+	height: auto;
+	width: 160px;
+}
+
+@keyframes scroll {
+	0% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	100% {
+		-webkit-transform: translateX(calc(-240px * 5));
+		transform: translateX(calc(-240px * 5));
+	}
+}
+
+/*Validation registrer*/
+
+#Descripcion {
+	width: 80%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	box-sizing: border-box;
+	border: 2px solid #ccc;
+	border-radius: 4px;
+}
+
+.valid-checks {
+	margin: 10px 0;
+	padding: 5px 5px;
+	background-color: #1CA03E;
+	border-radius: 25px;
+	transition: .2 ease;
+	opacity: 1;
+}
+
+.valid-checks ul li {
+	position: relative;
+	font-size: 15px;
+	font-weight: 300;
+	margin: 8px 0;
+	color: white;
+	transition: .2s;
+}
+
+.valid-checks ul li i {
+	font-size: 20px;
+	margin-right: 8px;
+}
+
+.valid-checks ul li.checked {
+	color: white;
+	font-weight: 500;
+}
+
+.hide {
+	opacity: 0;
+}
+
+/*Conocernos CSS*/
+
+#DivMision {
+	background-image: url(../imagenes/img/Mision.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#DivPolitica {
+	background-image: url(../imagenes/img/Politica.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#DivValores {
+	background-image: url(../imagenes/img/Valores.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#DivVision {
+	background-image: url(../imagenes/img/Vision2.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#DivHistoria {
+	background-image: url(../imagenes/img/Historia.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*CSS boton whatsapp*/
+
+img.btn-whatsapp {
+	display: block !important;
+	position: fixed;
+	z-index: 9999999;
+	bottom: 20px;
+	right: 20px;
+	cursor: pointer;
+	border-radius: 100px !important;
+}
+
+img.btn-whatsapp:hover {
+	border-radius: 100px !important;
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
+	-moz-box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
+	box-shadow: 0px 0px 15px 0px rgba(7, 94, 84, 1);
+	transition-duration: 1s;
+}

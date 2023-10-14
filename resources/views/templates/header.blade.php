@@ -1,7 +1,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-success fixed-top">
         <div class="container-fluid">
-            <a href="{{route('index')}}"><img src="{{asset('imagenes/img/Logo.jpg')}}" style="width: 150px; height: 50px;"></a>
+            <a href="{{route('index')}}"><img src="{{asset('imagenes/img/Logo.png')}}" style="width: 150px; height: 50px;"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -22,8 +22,8 @@
                         </li>
                     </ul>
                     <div>
-                        <a class="btn btn-light" href="{{route('registro')}}">Registrarse</a>
-                    <a class="btn btn-primary" href="{{route('ingreso')}}">Iniciar Sesion</a>
+                        <a class="btn btn-dark" href="{{route('registro')}}">Registrarse</a>
+                        <a class="btn btn-warning" href="{{route('ingreso')}}">Iniciar Sesion</a>
                     </div>
                 </div>
         </div>

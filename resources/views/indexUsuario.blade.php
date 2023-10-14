@@ -3,7 +3,7 @@
 @section('content')
     <br>
     <h1 style="text-align: center">Bienvenido Usuario</h1>
-    <p style="text-align: center">Aqui encontraras todas las rutas disponibles hasta le momento</p>
+    <p style="text-align: center">Aqui encontraras todas las rutas disponibles hasta el momento</p>
     <br>
     <div id="contenedor">
         <div class="container text-center">

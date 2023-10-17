@@ -11,10 +11,13 @@ class PqrsController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         //
         $pqrs = Pqrs::all();
+        if($request->is('api/*')){
+            return response()->json($pqrs, 200);
+        }
         return view('cuenta_Admin.pqrs.view',compact('pqrs'));
     }
 
@@ -39,6 +42,11 @@ class PqrsController extends Controller
         $pqr->email=$request->email;
         $pqr->mensaje=$request->mensaje;
         $pqr->save();
+
+        if($request->is("api/*")){
+            return response()->json("Pqrs guardada",200);
+        }
+
         return redirect()->route('contactanos.create');
 
     }

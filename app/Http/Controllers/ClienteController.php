@@ -11,10 +11,15 @@ class ClienteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         $clientes = Cliente::all();
-        return $clientes;//revisar que pagina se va usar para listar los clientes
+
+        if ($request->is('api/*')) {
+            return $clientes;
+        } else {
+            return view('cuenta_Admin.cliente.create', compact('clientes')); //revisar que pagina se va usar para listar los clientes
+        }
     }
 
     /**
@@ -30,67 +35,65 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        $cliente= new Cliente();
-        $cliente->nombre=$request->nombre;
-        $cliente->cedula=$request->cedula;
-        $cliente->telefono=$request->telefono;
+        $cliente = new Cliente();
+        $cliente->nombre = $request->nombre;
+        $cliente->cedula = $request->cedula;
+        $cliente->telefono = $request->telefono;
         $cliente->save();
-        $clientes = Cliente::all();
-        return response()->json("Cliente Guardado",200);
+        if ($request->is('api/*')) {
+            return back()->with('success', 'Cliente creado correctamente');
+        } else {
+            return redirect()->route('clientes.index');
+        }
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id)
+    public function show(Cliente $cliente)
     {
-        $cliente= Cliente::find(intval($id));
-        return $cliente;
+        $cliente = Cliente::find($cliente->id);
+        return view('clientes.', compact('cliente'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit($id)
+    public function edit(/*Cliente*/$cliente)
     {
-        $cliente= Cliente::find(intval($id));
-        return $cliente;
+        $cliente = Cliente::find($cliente);
+        return view('cuenta_Admin.cliente.edit', compact('cliente'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request)
-    {   
-        // $request=json_decode($request);
-        $cliente= Cliente::find(intval($request->id));//revisar con documentacion actualizada
-        $cliente->nombre=$request->nombre;
-        $cliente->cedula=$request->cedula;
-        $cliente->telefono=$request->telefono;
+    public function update(Request $request, Cliente $cliente)
+    {
+        $cliente = Cliente::find($cliente->id); //revisar con documentacion actualizada
+        $cliente->nombre = $request->nombre;
+        $cliente->cedula = $request->cedula;
+        $cliente->telefono = $request->telefono;
         $cliente->save();
-        return response()->json("Cliente actualizado",200);
+        return redirect()->route('clientes.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    // public function destroy($id)
-    // {
-    //     $cliente = Cliente::find($id);
-    //     $cliente->delete();
-    //     $clientes = Cliente::all();
-    //     return $clientes;
-    // }
-
-    public function destroy($id)
-    {   
-        
-        $cliente = Cliente::find(intval($id));
+    public function destroy(Request $request, /*Cliente*/$cliente)
+    {
+        $cliente = Cliente::find($cliente); //revisar con documentacion actualizada
         $cliente->delete();
-        return response()->json("Cliente eliminado",200);
+        if ($request->is('api/*')) {
+            return back()->with('success', 'Cliente eliminado correctamente');
+        } else {
+            return redirect()->route('clientes.index');
+        }
     }
 
-    public function generar_pdf(){ 
+    public function generar_pdf()
+    {
         $clientes = Cliente::all();
         $pdf = PDF\Pdf::loadView('cuenta_Admin.cliente.generar_pdf', compact('clientes'));
         return $pdf->download('Clientes.pdf');

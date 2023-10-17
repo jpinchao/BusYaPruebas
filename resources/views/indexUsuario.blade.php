@@ -42,4 +42,8 @@
             </tr>
         </thead>
     </table>
+    <form action="{{ route('logout') }}" method="GET">
+        @csrf <!-- Agrega el token CSRF para protección contra CSRF -->
+        <button type="submit" class="btn btn-danger">Cerrar Sesión</button>
+    </form>
 @endsection

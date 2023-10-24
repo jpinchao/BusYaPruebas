@@ -7,7 +7,7 @@
         <div class="row row-cols-2">
             <div class="col" id="DivMision">
                 <h3>MISION</h3>
-                <p style="font-size: 20px"><strong>AUTOLEGAL S.A. Ser una empresa líder en la prestación del servicio de
+                <p style="font-size: 20px"><strong>BusYa. Ser una empresa líder en la prestación del servicio de
                         transporte de pasajeros en diferentes modalidades, comprometida con el mejoramiento continuo del
                         equipo humano y vehicular, diseñando estrategias e implementando recursos tecnológicos de
                         seguimiento, para prestar un servicio con amabilidad, seguridad y responsabilidad.</strong> </p>
@@ -26,7 +26,7 @@
             </div>
             <div class="col" id="DivVision">
                 <h3>VISION</h3>
-                <p style="font-size: 20px"><strong>AUTOLEGAL S.A. prestará el servicio de transporte terrestre en la
+                <p style="font-size: 20px"><strong>BusYa. prestará el servicio de transporte terrestre en la
                         modalidad urbana intermunicipal, especial y carga. Propenderá por consolidar alianzas estratégicas
                         con otras empresas asegurándose de integrar entes o consorcios que participen directamente en el
                         manejo administrativo de éste para el desarrollo de todas las actividades de la industria
@@ -36,7 +36,7 @@
 
             <div class="col" id="DivPolitica">
                 <h3>POLÍTICA DEL SISTEMA DE GESTION INTEGRADO SGI</h3>
-                <p style="font-size: 20px"><strong>AUTOLEGAL S.A. Es una empresa dedicada en la Prestación del servicio de
+                <p style="font-size: 20px"><strong>BusYa. Es una empresa dedicada en la Prestación del servicio de
                         transporte terrestre de pasajeros. Su objetivo principal es satisfacer las necesidades de nuestros
                         usuarios, empleados, contratistas y comunidad en general a través de un equipo humano amable
                         comprometido con el mejoramiento continuo y el bienestar y prevención de enfermedades, accidentes

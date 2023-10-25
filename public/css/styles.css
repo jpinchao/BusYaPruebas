@@ -59,13 +59,13 @@ footer {
 	margin-bottom: 20px;
 }
 
-/*Slider metodos de pago*/
+/*Slider empresas*/
 
 #slider {
-	width: 100%;
-	height: 300px;
-	overflow: hidden;
-	position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
 }
 
 #slider ul {

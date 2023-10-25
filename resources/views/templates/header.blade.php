@@ -12,14 +12,6 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('conocernos')}}">Nosotros</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active" href="{{route('rutas')}}" aria-expanded="false">
-                                Rutas Urbanas
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="{{route('contactanos.create')}}">Contactanos</a>
-                        </li>
                     </ul>
                     <div>
                         <a class="btn btn-dark" href="{{route('registro')}}">Registrarse</a>

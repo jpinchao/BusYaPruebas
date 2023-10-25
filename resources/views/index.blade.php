@@ -67,31 +67,34 @@
         </ul>
     </div>
 </div>
-<h3>Metodos de pagos</h3>
+<h3>Empresas asociadas</h3>
 <div class="slider">
     <div class="slide-track">
-
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/visa.svg" alt="visa">
+        <div class="slide"><img src="http://creerencaldas.lapatria.com/recursos/img/empresas/logo%20unit.jpg" alt="visa">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/mastercard.svg" alt="mastercard">
+        <div class="slide"><img src="https://expresosideral.com/wp-content/uploads/2023/05/cropped-Logo-sideral-1.png" alt="mastercard">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/american_express.svg"
+        <div class="slide"><img src="https://pbs.twimg.com/profile_images/883437294191038464/fO17LKvk_400x400.jpg"
                 alt="american express">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/pse.svg" alt="PSE">
+        <div class="slide"><img src="https://www.eje21.com.co/site/wp-content/uploads/2018/02/Cosmobus-Manizales-e1518706410609.jpg"
+                alt="american express">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/daviplata.svg" alt="daviplata">
+        <div class="slide"><img src="https://guiadelgas.com/wp-content/uploads/2018/05/FOTO-1-MANIZALES-1024x766.jpg"
+            alt="american express">
         </div>
-
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/nequi.svg" alt="nequi">
+        <div class="slide"><img src="http://creerencaldas.lapatria.com/recursos/img/empresas/logo%20unit.jpg" alt="visa">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/efecty.svg" alt="efecty">
+        <div class="slide"><img src="https://expresosideral.com/wp-content/uploads/2023/05/cropped-Logo-sideral-1.png" alt="mastercard">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/baloto.svg" alt="baloto">
+        <div class="slide"><img src="https://pbs.twimg.com/profile_images/883437294191038464/fO17LKvk_400x400.jpg"
+                alt="american express">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/sured.svg" alt="sured">
+        <div class="slide"><img src="https://www.eje21.com.co/site/wp-content/uploads/2018/02/Cosmobus-Manizales-e1518706410609.jpg"
+                alt="american express">
         </div>
-        <div class="slide"><img src="https://cdn.pinbus.com/common/img/pagos/svg/codensa.svg" alt="codensa">
+        <div class="slide"><img src="https://guiadelgas.com/wp-content/uploads/2018/05/FOTO-1-MANIZALES-1024x766.jpg"
+            alt="american express">
         </div>
     </div>
 </div>

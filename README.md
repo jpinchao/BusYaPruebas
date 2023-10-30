@@ -1,6 +1,6 @@
-# PROYECTO AUTOLEGAL
+# PROYECTO BUSYA
 
-Proyecto de Programación con tecnologías web 2023-1
+Asignatura: ing. de Software
 Perfiles:
 
 Administardor 

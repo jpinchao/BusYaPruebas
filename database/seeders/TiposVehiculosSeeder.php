@@ -15,7 +15,7 @@ class TiposVehiculosSeeder extends Seeder
     {
         $tipo_vehiculo= new Tipo_vehiculo();
         $tipo_vehiculo->nombre="Buseta";
-        $tipo_vehiculo->descripcion="Descripcion vejiculo Buseta";
+        $tipo_vehiculo->descripcion="Descripcion vehiculo Buseta";
         $tipo_vehiculo->save();
 
         $tipo_vehiculo= new Tipo_vehiculo();

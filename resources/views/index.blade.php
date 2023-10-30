@@ -1,11 +1,16 @@
 @extends('templates.main')
-@section('title', 'Autolegal S.A.S.')
+@section('title', 'BusYa S.A.S.')
 @section('content')
-<h1>Bienvenido a la seccion de noticias de BusYa</h1>
-<p>Encuentra horarios y noticias de transporte interno de la ciudad</p>
+
+<img src="{{asset('imagenes/img/bodyLogo.png')}}" style="width: 140px; height: 190px;" alt="logo de BusYa completo para inicio de página">
+<img src="{{asset('imagenes/img/Manizales.png')}}" style="width: 200px; height: 80px; float: right;" alt="logo de BusYa completo para inicio de página">
+
+<h1>Bienvenido a la sección de noticias de <em>BusYa</em> </h1>
+<p>Encuentra horarios y noticias del transporte interno de la ciudad.</p>
 <div id="contenedor">
-    <h3 style="text-align: center">Noticias mas importantes</h3>
+    <h3 style="text-align: center">Noticias destacadas</h3>
     <br>
+    <img src="" alt="">
     <div id="slider">
         <ul>
             <li>

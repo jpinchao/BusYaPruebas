@@ -1,13 +1,16 @@
 body {
 	min-height: 100vh;
-	background-color:rgb(0, 0, 0);
+	background-color:#17212a;
 	align-items: center;
-	justify-content: center;
+	justify-content: justify;
 	font-size: calc(10px + 2vmin);
 	color: white;
 	padding-top: 55px;
 	margin: 0;
+	text-align: left;
+	font-family: 'Roboto', sans-serif;
 }
+
 
 main {
 	padding: 20px;
@@ -22,26 +25,23 @@ section h2 {
 }
 
 a:hover {
-	background-color: #7e7a7a;
+	background-color: #696e69;
 	border-radius: 10px;
-	border-style: double;
-	border-color: black;
+	/* border-style: double; */
+	/* border-color: black; */
 	transform: scale(1.1);
 }
 
 
-a
-
-
-
 footer {
-	position: fixed;
+	position:relative;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	padding: 5px;
-	background-color: #3b3b3b;
+	background-color: #696e69;;
 	text-align: center;
+	color:#17212a;
 }
 
 
@@ -50,8 +50,8 @@ footer {
 	width: 100%;
 	margin: auto;
 	padding: 20px;
-	background-color: #888888;
-	border: 1px solid #ccc;
+	background-color: #17212a;
+	/* border: 1px solid #ccc; */
 	border-radius: 5px;
 }
 
@@ -66,11 +66,13 @@ footer {
     height: 300px;
     overflow: hidden;
     position: relative;
+	align-items: justify;
 }
 
 #slider ul {
 	list-style: none;
 	margin: 0;
+	
 	padding: 0;
 	position: absolute;
 	top: 0;
@@ -82,14 +84,20 @@ footer {
 #slider ul li {
 	display: block;
 	float: left;
-	width: 25%;
+	width: 20%;
 	height: 100%;
+	/* border: red 2px solid; */
+	margin: 10px;
+	
 }
 
 #slider ul li img {
 	width: 100%;
-	height: 100%;
+	height: 90%;
+	border: #01c38d 2px solid;
+	border-radius: 5%;
 	object-fit: cover;
+	
 }
 
 .slider {
@@ -98,6 +106,7 @@ footer {
 	margin: auto;
 	overflow: hidden;
 	align-items: center;
+	/* align-items: justify; */
 }
 
 .slider:before {
@@ -108,6 +117,7 @@ footer {
 	width: 23.958%;
 	height: 110px;
 	background: linear-gradient(-90deg, hsla(0, 0%, 96.9%, 0), #f7f7f7);
+	
 }
 
 .slider:after {
@@ -147,6 +157,7 @@ footer {
 .slider .slide img {
 	height: auto;
 	width: 160px;
+	
 }
 
 @keyframes scroll {
@@ -170,6 +181,7 @@ footer {
 	box-sizing: border-box;
 	border: 2px solid #ccc;
 	border-radius: 4px;
+	/* margin-bottom: 20px;	 */
 }
 
 .valid-checks {
@@ -206,35 +218,50 @@ footer {
 
 /*Conocernos CSS*/
 
+
 #DivMision {
-	background-image: url(../imagenes/img/Mision.gif);
+	background-image: url(../imagenes/img/mision.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 200px;
+	background-position: center;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
 }
 
 #DivPolitica {
-	background-image: url(../imagenes/img/Politica.gif);
+	background-image: url(../imagenes/img/politica.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 200px;
+	background-position: center;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;
+	list-style-position:outside;
 }
 
 #DivValores {
-	background-image: url(../imagenes/img/Valores.gif);
+	background-image: url(../imagenes/img/valores.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 200px;
+	background-position: center;
+	font-family: 'Roboto', sans-serif;
+	text-align: left;	
+	list-style-position:outside;
 }
 
 #DivVision {
-	background-image: url(../imagenes/img/Vision2.gif);
+	background-image: url(../imagenes/img/vision.png);
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: 200px;
+	background-position: center;
+	/* font-family: 'Roboto', sans-serif; */
+	text-align: left;
 }
 
-#DivHistoria {
+/* #DivHistoria {
 	background-image: url(../imagenes/img/Historia.gif);
 	background-repeat: no-repeat;
 	background-size: cover;
-}
+} */
 
 /*CSS boton whatsapp*/
 
@@ -257,5 +284,6 @@ img.btn-whatsapp:hover {
 }
 
 .bg-success{
-	background-color: #878787 !important;
+	background-color: #696e69 !important;
+	border-bottom: 4px solid #01c38d; 
 }

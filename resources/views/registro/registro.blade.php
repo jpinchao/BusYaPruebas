@@ -12,18 +12,18 @@
     <link rel="stylesheet" href="{{asset('css/styles_validation.css')}}">
 </head>
 
-<body>
+<body style="background-color: #eee;">
 
-    <section class="vh-100" style="background-color: #eee;">
-        <div class="container h-100">
+    <section class="vh-100">
+        <div class="container h-100" >
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-lg-12 col-xl-11">
-                    <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card custom-card text-white" >
                         <div class="card-body p-md-5">
                             <div class="row justify-content-center">
                                 <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registro</p>
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Ingresa tus datos</p>
 
                                     <form class="mx-1 mx-md-4" method="post" action="{{route('validar-registro')}}">
                                         @csrf
@@ -41,7 +41,7 @@
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
 
-                                                <label class="form-label" for="cedula">Cedula</label>
+                                                <label class="form-label" for="cedula">Cédula</label>
                                                 <input type="number" id="cedula" name="cedula"
                                                     class="form-control" />
                                             </div>
@@ -50,7 +50,7 @@
                                             <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                                             <div class="form-outline flex-fill mb-0">
 
-                                                <label class="form-label" for="telefono">Numero de telefono</label>
+                                                <label class="form-label" for="telefono">Número de telefono</label>
                                                 <input type="number" id="telefono" name="telefono"
                                                     class="form-control" />
                                             </div>
@@ -123,15 +123,14 @@
                                         </div>
 
                                         <div class="form-check d-flex justify-content-center mb-5">
-                                            <input class="form-check-input me-2" type="checkbox" value=""
-                                                id="form2Example3c" />
-                                            <label class="form-check-label" for="form2Example3">Acepto los <a onclick="abrirVentanaEmergente()">terminos y condiciones</a>
-                                            </label>
+                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                                            <label class="form-check-label" for="form2Example3">Acepto los <a onclick="abrirVentanaEmergente(imagenUrl)" class="highlight-link">términos y condiciones</a></label>
                                         </div>
+                                        
 
                                         <div class="d-flex flex-row justify-content-center mb-4">
-                                            <p>Ya estas registrad@? <a href="{{ route('ingreso') }}">Inicia
-                                                    Sesion</a></p>
+                                            <p>Ya tienes una cuenta? <a href="{{ route('ingreso') }}">Inicia
+                                                    Sesión</a></p>
                                         </div>
 
                                         <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
@@ -143,9 +142,12 @@
                                 </div>
                                 <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
 
-                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
-                                        class="img-fluid" alt="Sample image">
+                                    <img src="{{ asset('imagenes/img/logo2.png') }}"
+                                        class="img-fluid" alt="Imagen de Logo">
 
+                                </div>
+                                <div class="text-end">
+                                    <a href="/" class="btn btn-dark btn-sm mt-3">Regresar</a>
                                 </div>
                             </div>
                         </div>
@@ -161,6 +163,9 @@
     <script src='{{asset('js/functions/Script_Validation.js')}}'></script>
     <script src='{{asset('js/functions/Script.js')}}'></script>
     <script src='{{asset('js/functions/ScriptAPI.js')}}'></script>
+    <script>
+        var imagenUrl = "{{ asset('imagenes/img/2560px-Minjusticia_Colombia.svg.png') }}";
+    </script>
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title', 'Autolegal S.A.S.')
+@section('title', 'BusYa S.A.S.')
 @section('content')
     <br>
     <h1 style="text-align: center">Bienvenido Usuario</h1>
@@ -28,7 +28,7 @@
             </form>
         </div>
     </div>
-    <table class="table table-striped">
+    <table class="table table-striped text-white">
         <thead>
             <tr>
                 <th scope="col">Ruta</th>

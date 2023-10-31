@@ -30,10 +30,10 @@ class UsersSeeder extends Seeder
         $usuario=new User();
         //$usuario->id_cliente=;
         $usuario->id_empleado= 2;
-        $usuario->username= "emp";
+        $usuario->username= "empleado1";
         //como se protege el de password
-        $usuario->password= Hash::make("emp");
-        $usuario->email= "emp@emp.com";
+        $usuario->password= Hash::make("empleapdo1");
+        $usuario->email= "empleado1@gmail.com";
         //esta campo es generado automaticamente
         //$usuario->estado= 1;
         $usuario->id_rol_usuario= 2;
@@ -42,10 +42,10 @@ class UsersSeeder extends Seeder
         $usuario=new User();
         //$usuario->id_cliente=;
         $usuario->id_empleado= 3;
-        $usuario->username= "emp2";
+        $usuario->username= "empleado2";
         //como se protege el de password
-        $usuario->password= Hash::make("emp2");
-        $usuario->email= "emp2@emp.com";
+        $usuario->password= Hash::make("empleado2");
+        $usuario->email= "empleado2@gmail.com";
         //esta campo es generado automaticamente
         $usuario->estado= 2;
         $usuario->id_rol_usuario= 2;
@@ -54,13 +54,14 @@ class UsersSeeder extends Seeder
         $usuario=new User();
         //$usuario->id_cliente=;
         $usuario->id_empleado= 3;
-        $usuario->username= "cli";
+        $usuario->username= "empleado3";
         //como se protege el de password
-        $usuario->password= Hash::make("cli");
-        $usuario->email= "cli@cli.com";
+        $usuario->password= Hash::make("empleado3");
+        $usuario->email= "empleado3@gmail.com";
         //esta campo es generado automaticamente
         $usuario->estado= 2;
-        $usuario->id_rol_usuario= 3;
+        $usuario->id_rol_usuario= 2;
         $usuario->save();
+        
     }
 }

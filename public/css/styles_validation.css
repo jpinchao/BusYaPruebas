@@ -38,3 +38,29 @@
 .hide {
 	opacity: 0;
 }
+.card-body p-md-5 {
+	background-color: blue;
+}
+
+.custom-card {
+	background-color: #17212a;
+	border-radius: 25px;
+	border-color: #01c38d;
+	border-width: 4px; 
+	border-style: solid; 
+}
+
+.custom-card .text-white {
+	color: white;
+  }
+
+.vh-100 {
+	padding-top: 1%;
+	background-color: #eee;
+	height: 100vh!important;
+}
+.highlight-link {
+    color: #007bff; 
+    text-decoration: underline; 
+    cursor: pointer;
+}

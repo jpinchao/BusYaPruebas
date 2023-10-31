@@ -15,9 +15,18 @@
                         </li>
                     </ul>
                     <div>
-                        <a class="btn btn-dark" href="{{route('registro')}}">Registrarse</a>
-                        <a class="btn btn-warning" href="{{route('ingreso')}}">Iniciar sesión</a>
+                        @guest
+                            {{-- Mostrar estos botones solo si el usuario no ha iniciado sesión --}}
+                            <a class="btn btn-dark" href="{{ route('registro') }}">Registrarse</a>
+                            <a class="btn btn-warning" href="{{ route('ingreso') }}">Iniciar sesión</a>
+                        @else
+                            <form action="{{ route('logout') }}" method="GET">
+                                @csrf <!-- Agrega el token CSRF para protección contra CSRF -->
+                                <button type="submit" class="btn btn-danger">Cerrar Sesión</button>
+                            </form>
+                        @endguest
                     </div>
+                    
                 </div>
             
         </div>

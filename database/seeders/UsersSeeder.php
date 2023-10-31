@@ -47,20 +47,20 @@ class UsersSeeder extends Seeder
         $usuario->password= Hash::make("empleado2");
         $usuario->email= "empleado2@gmail.com";
         //esta campo es generado automaticamente
-        $usuario->estado= 2;
+        
         $usuario->id_rol_usuario= 2;
         $usuario->save();
 
         $usuario=new User();
         //$usuario->id_cliente=;
         $usuario->id_empleado= 3;
-        $usuario->username= "empleado3";
+        $usuario->username= "cliente1";
         //como se protege el de password
-        $usuario->password= Hash::make("empleado3");
-        $usuario->email= "empleado3@gmail.com";
+        $usuario->password= Hash::make("cliente1");
+        $usuario->email= "cliente1@gmail.com";
         //esta campo es generado automaticamente
-        $usuario->estado= 2;
-        $usuario->id_rol_usuario= 2;
+        
+        $usuario->id_rol_usuario= 3;
         $usuario->save();
         
     }

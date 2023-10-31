@@ -2,8 +2,8 @@
 
 ## Asignatura: Ingeniera de Software II
 ### Este proyecto, desarrollado como parte de la asignatura de Ingeniería de Software, ofrece una solución integral para la gestión de servicios de transporte público. A continuación, se detallan los requisitos y pasos necesarios para ejecutar nuestro proyecto de manera local.
-# Requisitos y pasos para ejecutar nuestro proyecto:
-## Clonar el repositorio: https://github.com/jpinchao/BusYaPruebas.git
+## Requisitos y pasos para ejecutar nuestro proyecto:
+### Clonar el repositorio: https://github.com/jpinchao/BusYaPruebas.git
 
 ### Instalar Composer, herramienta de administración de dependencias: https://getcomposer.org/download/    
 

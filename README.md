@@ -5,15 +5,15 @@
 # Requisitos y pasos para ejecutar nuestro proyecto:
 ## Clonar el repositorio: https://github.com/jpinchao/BusYaPruebas.git
 
-## Instalar Composer, herramienta de administración de dependencias: https://getcomposer.org/download/    
+### Instalar Composer, herramienta de administración de dependencias: https://getcomposer.org/download/    
 
-## Instalar y ejecutar un entorno de servidor web local que incluye Apache y MySQL: https://www.apachefriends.org/es/index.html
+### Instalar y ejecutar un entorno de servidor web local que incluye Apache y MySQL: https://www.apachefriends.org/es/index.html
 
-## Acceder a phpMyAdmin a través de http://localhost/phpmyadmin/ y crear una base de datos llamada "laravel"
+### Acceder a phpMyAdmin a través de http://localhost/phpmyadmin/ y crear una base de datos llamada "laravel"
 
-## Abrir el repositorio, copiar el archivo .env.example y dejarlo nombrado solo con .env
+### Abrir el repositorio, copiar el archivo .env.example y dejarlo nombrado solo con .env
      
-## Ejecutar los siguientes comandos(uno a la vez) en una terminal dentro de nuestro repositorio:
+### Ejecutar los siguientes comandos(uno a la vez) en una terminal dentro de nuestro repositorio:
     composer update
     php artisan migrate:fresh --seed
     php artisan key:generate

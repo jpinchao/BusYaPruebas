@@ -13,7 +13,11 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('conocernos')}}" style= "font-size: 20px; margin-left:30px"><em>A cerca de nosotros...</em></a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{route('pqr')}}" style= "font-size: 20px; margin-left:30px"><em>PQR´s</em></a>
+                        </li>
                     </ul>
+                    
                     <div>
                         @guest
                             {{-- Mostrar estos botones solo si el usuario no ha iniciado sesión --}}

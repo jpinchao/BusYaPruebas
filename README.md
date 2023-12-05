@@ -42,4 +42,4 @@
     empleado1@gmail.com
 
     Contraseña:
-    empleado1 push
+    empleado1

@@ -65,7 +65,7 @@ class UsersSeeder extends Seeder
         
         $usuario=new User();
         //$usuario->id_cliente=;
-        $usuario->id_empleado= 4;
+        $usuario->id_empleado= 3;
         $usuario->username= "cliente2";
         //como se protege el de password
         $usuario->password= Hash::make("cliente2");

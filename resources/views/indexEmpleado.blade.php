@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title', 'Notficar Retrasos')
+@section('title', 'Notificar Retrasos')
 @section('content')
     <h1 style="text-align: center">Bienvenido Conductor</h1>
 

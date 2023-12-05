@@ -16,7 +16,7 @@
             <li>
                 <a
                     href="https://caracol.com.co/2022/12/31/aumento-de-las-tarifas-del-servicio-publico-en-manizales-no-superara-el-ipc/?rel=buscador_noticias">
-                    <img src="https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2022/12/Paro-Gran-Caldas-1024x768.jpg"
+                    <img src="https://caracol.com.co/resizer/nSw--eQPGBqMbUn4gwjaOibSsak=/768x576/filters:format(png):quality(70)/cloudfront-us-east-1.images.arcpublishing.com/prisaradioco/7FEI2W5ZABCGLPMVNFEVFZFJPA.png"
                         alt="">
                 </a>
             </li>

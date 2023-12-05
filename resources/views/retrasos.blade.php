@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title', 'Restrsos')
+@section('title', 'Retrasos')
 @section('content')
     <div class="container mt-5">
         <h1 class="text-center mb-4">Retrasos Notificados</h1>

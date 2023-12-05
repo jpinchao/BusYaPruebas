@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ViajeController;
 use App\Models\Vehiculo;
+use App\Http\Controllers\PqrController;
 
 /*
 |--------------------------------------------------------------------------
@@ -83,6 +84,12 @@ Route::view('/rutas','rutas')->name('rutas');
 Route::get('/', function () {
     return view('index');
 })->name('index');
+
+// Ruta para PQRS
+Route::get('/agregar-pqr', [PqrController::class, 'showForm'])->name('pqr');
+Route::post('/agregar-pqr', [PqrController::class, 'store'])->name('pqr.store');
+Route::get('/mis-pqr', [PqrController::class, 'index'])->name('pqr.index');
+
 
 
 

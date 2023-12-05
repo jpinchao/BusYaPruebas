@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_cliente');
             $table->string('email');
+            $table->string('tipo');
             $table->string('mensaje');
             //implementar luego
             //$table->string('estado');

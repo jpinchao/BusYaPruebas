@@ -29,7 +29,8 @@ class ClienteController extends Controller
     {
         //
     }
-
+    //Crear un cliente desde la vista de un administrador
+    
     /**
      * Store a newly created resource in storage.
      */

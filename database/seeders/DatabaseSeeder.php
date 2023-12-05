@@ -17,7 +17,6 @@ class DatabaseSeeder extends Seeder
             VehiculosSeeder::class,
             RolesUsuarioSeeder::class,
             TiposEmpleadosSeeder::class,
-            TiposRutasSeeder::class,
             RutasSeeder::class,
             ParadasSeeder::class,
             ClientesSeeder::class,

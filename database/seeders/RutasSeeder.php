@@ -14,18 +14,15 @@ class RutasSeeder extends Seeder
     public function run(): void
     {
         $ruta = new Ruta();
-        $ruta->id_tipo_ruta= 1;
         $ruta->nombre= "Lusitania-Universidad de Manizales";
+        $ruta->origen="Lusitania";
+        $ruta->destino="Universidad de Manizales";
         $ruta->save();
 
         $ruta = new Ruta();
-        $ruta->id_tipo_ruta=2;
         $ruta->nombre="San Sebastian-Centro";
-        $ruta->save();
-
-        $ruta = new Ruta();
-        $ruta->id_tipo_ruta=3;
-        $ruta->nombre="Manizales-La Dorada";
+        $ruta->origen="San Sebastian";
+        $ruta->destino="Centro";
         $ruta->save();
     }
 }

@@ -44,6 +44,18 @@
                     Tipos Vehiculos
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('rutasyhorarios.index')}}">
+                    <span data-feather="layers" class="align-text-bottom"></span>
+                    Rutas
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('viajes.index')}}">
+                    <span data-feather="layers" class="align-text-bottom"></span>
+                    Viajes
+                </a>
+            </li>
         </ul>
     </div>
 </nav>

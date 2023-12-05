@@ -14,8 +14,7 @@ class RutaController extends Controller
     public function index()
     {
         $rutas=Ruta::all();
-        $tipos_ruta= Tipo_ruta::all();
-        return view('cuenta_Admin.ruta.create',compact('rutas','tipos_ruta'));
+        return view('cuenta_Admin.ruta.create',compact('rutas'));
     }
 
     /**
@@ -32,8 +31,9 @@ class RutaController extends Controller
     public function store(Request $request)
     {
         $ruta=new Ruta();
-        $ruta->id_tipo_ruta=$request->id_tipo_ruta;
         $ruta->nombre=$request->nombre;
+        $ruta->origen=$request->origen;
+        $ruta->destino=$request->destino;
         $ruta->save();
         return redirect()->route('rutasyhorarios.index');
     }
@@ -41,9 +41,9 @@ class RutaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Ruta $ruta)
+    public function show(/*Ruta*/ $ruta)
     {
-        $ruta= Ruta::find($ruta->id);
+        $ruta= Ruta::find($ruta);
         return view('rutas.',compact('ruta'));
     }
 
@@ -53,9 +53,7 @@ class RutaController extends Controller
     public function edit(/*Ruta*/ $ruta)
     {
         $ruta= Ruta::find($ruta);
-        $tipo= $ruta->id_tipo_ruta;
-        $tipos_ruta= Tipo_ruta::all();
-        return view('cuenta_Admin.ruta.edit',compact('ruta','tipos_ruta','tipo'));
+        return view('cuenta_Admin.ruta.edit',compact('ruta'));
     }
 
     /**
@@ -64,8 +62,9 @@ class RutaController extends Controller
     public function update(Request $request, /*Ruta*/ $ruta)
     {
         $ruta= Ruta::find($ruta);
-        $ruta->id_tipo_ruta=$request->id_tipo_ruta;
         $ruta->nombre=$request->nombre;
+        $ruta->origen=$request->origen;
+        $ruta->destino=$request->destino;
         $ruta->save();
         return redirect()->route('rutasyhorarios.index');
     }

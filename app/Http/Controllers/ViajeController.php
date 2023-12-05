@@ -16,17 +16,14 @@ class ViajeController extends Controller
      */
     public function index(request $request)
     {
-        $Consulta=$request->get('Consulta');
-        $viajes = DB::table('viaje')
-                    ->select('viaje.id','ruta.nombre as ruta','empleado.nombre as conductor','vehiculo.placa as vehiculo','viaje.fecha_salida','viaje.fecha_llegada','viaje.cupos_disponibles','viaje.costo')
-                    ->where('ruta.nombre','LIKE','%'.$Consulta.'%' );
+        $viajes = Viaje::all();
         $rutas = Ruta::all();
         $empleados = Empleado::all();
         $conductores = $empleados->filter(function ($empleado) {
             return $empleado->id_tipo_empleado == 2;
         });
         $vehiculos = Vehiculo::all();
-        return view('cuenta_Admin.viaje.create', compact('viajes', 'rutas', 'conductores', 'vehiculos', 'Consulta'));
+        return view('cuenta_Admin.viaje.create', compact('viajes', 'rutas', 'conductores', 'vehiculos'));
     }
 
     /**

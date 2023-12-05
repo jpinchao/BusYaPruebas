@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title', 'BusYa S.A.S.')
+@section('title', 'Rutas Disponibles')
 @section('content')
     <div class="container">
         <div class="row">

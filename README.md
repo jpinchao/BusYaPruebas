@@ -35,3 +35,11 @@
 
     Contraseña:
     cliente1
+
+### Empleado(Conductor)
+
+    Email:
+    empleado1@gmail.com
+
+    Contraseña:
+    empleado1

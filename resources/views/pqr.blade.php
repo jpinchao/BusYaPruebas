@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title', 'Agregar PQR')
+@section('title', "PQR's")
 @section('content')
 <div class="container mt-5">
     <h1>Agregar PQR</h1>

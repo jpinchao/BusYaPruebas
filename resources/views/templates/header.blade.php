@@ -37,6 +37,15 @@
                                 </li>
                             @endif
                         @endauth
+                        @auth
+                            @if(auth()->user()->hasRole('Empleado'))
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ route('conductor.index') }}" style="font-size: 20px; margin-left:30px">
+                                        <em>Notificar Retrasos</em>
+                                    </a>
+                                </li>
+                            @endif
+                        @endauth
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="{{route('conocernos')}}" style= "font-size: 20px; margin-left:30px"><em>Acerca de nosotros...</em></a>
                         </li>

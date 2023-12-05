@@ -1,5 +1,5 @@
 @extends('templates.main')
-@section('title', 'BusYa S.A.S.')
+@section('title', 'Inicio')
 @section('content')
 
 <img src="{{asset('imagenes/img/bodyLogo.png')}}" style="width: 140px; height: 190px;" alt="logo de BusYa completo para inicio de página">

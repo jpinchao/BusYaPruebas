@@ -1,45 +1,31 @@
 @extends('templates.main')
 @section('title', 'BusYa S.A.S.')
 @section('content')
-    <br>
-    <h1 style="text-align: center">Bienvenido Usuario</h1>
-    <p style="text-align: center">Aqui encontraras todas las rutas disponibles hasta el momento</p>
-    <br>
-    <div id="contenedor">
-        <div class="container text-center">
-            <form action="{{ route('viajes.index') }}" method="GET">
-                @csrf
-                <div class="row">
-                    <div class="col-md-6">
-                        <label for="">Ruta:</label>
-                        <br>
-                        <select class="form-select" aria-label="Default select example" name="id_ruta" >
-                            <option selected disabled>seleccione...</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="">Fecha Salida:</label>
-                        <br>
-                        <input type="datetime-local" class="form-control" name="fecha_salida">
-                    </div>
-                </div>
-                <br>
-                <button type="submit" class="btn btn-primary">Buscar</button>
-            </form>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center mb-4 text-white">Bienvenido Usuario</h1>
+                <p class="text-center text-white">Aquí encontrarás todas las rutas disponibles hasta el momento:</p>
+
+                <table class="table table-bordered mt-4 text-white">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Origen</th>
+                            <th scope="col">Destino</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($rutas as $ruta)
+                            <tr>
+                                <td>{{ $ruta->nombre }}</td>
+                                <td>{{ $ruta->origen }}</td>
+                                <td>{{ $ruta->destino }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <table class="table table-striped text-white">
-        <thead>
-            <tr>
-                <th scope="col">Ruta</th>
-                <th scope="col">conductor</th>
-                <th scope="col">Vehiculo</th>
-                <th scope="col">Fecha salida</th>
-                <th scope="col">Fecha llegada</th>
-                <th scope="col">Costo</th>
-                <th scope="col">Cupos Disponibles</th>
-                <th scope="row">Acciones</th>
-            </tr>
-        </thead>
-    </table>
 @endsection

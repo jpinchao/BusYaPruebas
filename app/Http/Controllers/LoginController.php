@@ -15,7 +15,7 @@ class LoginController extends Controller
      */
     public function authenticate(Request $request){
         /*use a dd() to show email and password of request*/
-
+    
 
         $credentials= $request->validate([
             'email' => ['required','email'],
@@ -29,9 +29,12 @@ class LoginController extends Controller
 
             if (auth()->user()->hasRole("Admin")) {
                 return redirect()->intended('CuentaAdmin');
+            } elseif (auth()->user()->hasRole("Empleado")) {
+                return redirect()->intended('CuentaEmpleado');
+
             } elseif (auth()->user()->hasRole("Cliente")) {
-                return redirect()->intended('CuentaCliente');
-            } else{
+                return redirect()->intended('CuentaCliente');   } 
+            else{
                 echo("error");
                 // return redirect()->intended('CuentaCliente');
             }

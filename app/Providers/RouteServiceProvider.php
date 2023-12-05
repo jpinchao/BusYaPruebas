@@ -21,6 +21,7 @@ class RouteServiceProvider extends ServiceProvider
     public const HOME = [
         'Admin' => '/CuentaAdmin',
         'Cliente' => '/CuentaCliente',
+        'Empleado' => '/CuentaEmpleado',
     ];
 
     /**

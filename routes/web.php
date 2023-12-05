@@ -17,6 +17,9 @@ use App\Http\Controllers\VehiculoController;
 use App\Http\Controllers\ViajeController;
 use App\Models\Vehiculo;
 use App\Http\Controllers\PqrController;
+use App\Http\Controllers\ConductorController;
+use App\Http\Controllers\ClienteController2;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -32,7 +35,6 @@ use App\Http\Controllers\PqrController;
 // traer la vista de la pagina principal que esta en la carpeta views/main/index.blade.php
 
 Route::middleware(['auth', 'Admin'])->group(function () {
-
     Route::get('/CuentaAdmin', function () {
         $vehiculos = Vehiculo::all();
         return view('cuenta_Admin.indexAdmin', compact('vehiculos'));
@@ -49,32 +51,42 @@ Route::middleware(['auth', 'Admin'])->group(function () {
     Route::resource('/viajes', ViajeController::class);
     Route::resource('/pqrs', PqrsController::class)->except(['create','store']);
     Route::resource('/usuarios', UserController::class);
-
+    
     Route::get('downloadVehiculo-pdf', '\App\Http\controllers\VehiculoController@generar_pdf')->name('descargarVehiculos-pdf');
-
     // Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
 Route::middleware(['auth', 'Cliente'])->group(function () {
 
-    Route::get('/CuentaCliente', function () {
+    /*Route::get('/CuentaCliente', function () {
         return view('indexUsuario');
-    })->name('CuentaCliente');
-
+    })->name('CuentaCliente');*/
+    Route::get('/CuentaCliente',[ClienteController2::class, 'index'])->name('CuentaCliente');
+    // Ruta para PQRS
+    Route::get('/agregar-pqr', [PqrController::class, 'showForm'])->name('pqr');
+    Route::post('/agregar-pqr', [PqrController::class, 'store'])->name('pqr.store');
+    Route::get('/mis-pqr', [PqrController::class, 'index'])->name('pqr.index');
 });
 
+Route::middleware(['auth', 'Empleado'])->group(function () {
+    Route::get('/CuentaEmpleado', function () {
+        return view('indexEmpleado');
+    })->name('CuentaEmpleado');
+    Route::get('/conductor', [ConductorController::class, 'index'])->name('conductor.index');
+    Route::post('/conductor/notificar', [ConductorController::class, 'notificar'])->name('notificar');
+    
+});
 Route::middleware(['guest'])->group(function () {
-
     // Route::view('/conocernos', 'conocernos');
     // Route::view('/rutas', 'rutas');
-
     Route::resource('/pqrs', PqrsController::class)->only(['store','create']);
-
     Route::view('/registro', 'registro.registro')->name('registro');
     Route::view('/ingreso', 'ingreso.ingreso')->name('ingreso');
     Route::post('/validar-registro', [RegisterController::class, 'store'])->name('validar-registro');
     Route::post('/iniciar-sesion', [LoginController::class, 'authenticate'])->name('iniciar-sesion');
 });
+
+
 
 // No restriccion
 Route::resource('/contactanos', PqrsController::class);
@@ -84,11 +96,6 @@ Route::view('/rutas','rutas')->name('rutas');
 Route::get('/', function () {
     return view('index');
 })->name('index');
-
-// Ruta para PQRS
-Route::get('/agregar-pqr', [PqrController::class, 'showForm'])->name('pqr');
-Route::post('/agregar-pqr', [PqrController::class, 'store'])->name('pqr.store');
-Route::get('/mis-pqr', [PqrController::class, 'index'])->name('pqr.index');
 
 
 

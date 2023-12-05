@@ -62,6 +62,7 @@ Route::middleware(['auth', 'Cliente'])->group(function () {
         return view('indexUsuario');
     })->name('CuentaCliente');*/
     Route::get('/CuentaCliente',[ClienteController2::class, 'index'])->name('CuentaCliente');
+    Route::get('/Retrasos',[ClienteController2::class, 'retrasos'])->name('retrasos');
     // Ruta para PQRS
     Route::get('/agregar-pqr', [PqrController::class, 'showForm'])->name('pqr');
     Route::post('/agregar-pqr', [PqrController::class, 'store'])->name('pqr.store');
@@ -69,10 +70,10 @@ Route::middleware(['auth', 'Cliente'])->group(function () {
 });
 
 Route::middleware(['auth', 'Empleado'])->group(function () {
-    Route::get('/CuentaEmpleado', function () {
+    /*Route::get('/CuentaEmpleado', function () {
         return view('indexEmpleado');
-    })->name('CuentaEmpleado');
-    Route::get('/conductor', [ConductorController::class, 'index'])->name('conductor.index');
+    })->name('CuentaEmpleado');*/
+    Route::get('/CuentaEmpleado', [ConductorController::class, 'index'])->name('conductor.index');
     Route::post('/conductor/notificar', [ConductorController::class, 'notificar'])->name('notificar');
     
 });

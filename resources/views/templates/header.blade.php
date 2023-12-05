@@ -10,11 +10,35 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        @auth
+                            @if(auth()->user()->hasRole('Cliente'))
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ route('CuentaCliente') }}" style="font-size: 20px; margin-left:30px">
+                                        <em>Inicio</em>
+                                    </a>
+                                </li>
+                            @endif
+                        @endauth
+                        @auth
+                            @if(auth()->user()->hasRole('Cliente'))
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ route('retrasos') }}" style="font-size: 20px; margin-left:30px">
+                                        <em>Retrasos</em>
+                                    </a>
+                                </li>
+                            @endif
+                        @endauth
+                        @auth
+                            @if(auth()->user()->hasRole('Cliente'))
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ route('pqr') }}" style="font-size: 20px; margin-left:30px">
+                                        <em>PQR´s</em>
+                                    </a>
+                                </li>
+                            @endif
+                        @endauth
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('conocernos')}}" style= "font-size: 20px; margin-left:30px"><em>A cerca de nosotros...</em></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="{{route('pqr')}}" style= "font-size: 20px; margin-left:30px"><em>PQR´s</em></a>
+                            <a class="nav-link active" aria-current="page" href="{{route('conocernos')}}" style= "font-size: 20px; margin-left:30px"><em>Acerca de nosotros...</em></a>
                         </li>
                     </ul>
                     

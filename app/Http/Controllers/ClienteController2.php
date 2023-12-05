@@ -6,6 +6,7 @@ use Barryvdh\DomPDF\Facade as PDF;
 use App\Models\Cliente;
 use Illuminate\Http\Request;
 use App\Models\Ruta;
+use App\Models\Notificacion;
 
 class ClienteController2 extends Controller
 {
@@ -18,4 +19,9 @@ class ClienteController2 extends Controller
         return view('indexUsuario', compact('rutas'));
     }
 
+    public function retrasos(Request $request)
+    {
+        $notificaciones = Notificacion::all();
+        return view('retrasos', compact('notificaciones'));
+    }
 }

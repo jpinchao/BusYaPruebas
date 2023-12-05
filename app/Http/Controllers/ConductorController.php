@@ -3,33 +3,33 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Notificacion;
+use App\Models\Ruta;
+
 
 class ConductorController extends Controller
 {
     public function index()
     {
-        return view('conductor.index');
+        $rutas = Ruta::all();
+        $notificaciones = Notificacion::all();
+        return view('indexEmpleado', compact('rutas', 'notificaciones'));
     }
-
     public function notificar(Request $request)
     {
-        // Validar los datos del formulario
         $request->validate([
             'ruta' => 'required',
             'descripcion' => 'required',
             'tiempo_estimado' => 'required|numeric',
             // Agrega otras reglas de validación según sea necesario
         ]);
-
-        // Crear una nueva notificación en la base de datos
+        $user_id = auth()->user()->id;
         Notificacion::create([
-            'ruta' => $request->ruta,
+            'ruta_id' => $request->ruta_id,
             'descripcion' => $request->descripcion,
             'tiempo_estimado' => $request->tiempo_estimado,
+            'user_id' => $user_id,
             // Agrega otros campos según sea necesario
         ]);
-
-        // Redireccionar con un mensaje de éxito
-        return redirect('/conductor')->with('success', 'Notificación enviada exitosamente.');
+        return redirect()->route('conductor.index')->with('success', 'Notificacion enviada');
     }
 }

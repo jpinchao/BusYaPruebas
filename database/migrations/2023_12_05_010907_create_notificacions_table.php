@@ -3,22 +3,22 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNotificacionesTable extends Migration
+class CreateNotificacionsTable extends Migration
 {
     public function up()
     {
-        Schema::create('notificaciones', function (Blueprint $table) {
+        Schema::create('notificacions', function (Blueprint $table) {
             $table->id();
-            $table->string('ruta');
+            $table->foreignId('ruta_id')->constrained(); 
             $table->text('descripcion');
             $table->integer('tiempo_estimado');
-            // Agrega otros campos según sea necesario
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('notificaciones');
+        Schema::dropIfExists('notificacions');
     }
 }

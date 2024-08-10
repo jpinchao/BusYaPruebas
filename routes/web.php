@@ -19,6 +19,8 @@ use App\Models\Vehiculo;
 use App\Http\Controllers\PqrController;
 use App\Http\Controllers\ConductorController;
 use App\Http\Controllers\ClienteController2;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\TestEmail;
 
 
 /*
@@ -33,6 +35,11 @@ use App\Http\Controllers\ClienteController2;
 */
 
 // traer la vista de la pagina principal que esta en la carpeta views/main/index.blade.php
+
+Route::get('/send-test-email', function () {
+    Mail::to('auditorjr429@gmail.com')->send(new TestEmail());
+    return 'Correo de prueba enviado!';
+});
 
 Route::middleware(['auth', 'Admin'])->group(function () {
     Route::get('/CuentaAdmin', function () {
@@ -51,7 +58,7 @@ Route::middleware(['auth', 'Admin'])->group(function () {
     Route::resource('/viajes', ViajeController::class);
     Route::resource('/pqrs', PqrsController::class)->except(['create','store']);
     Route::resource('/usuarios', UserController::class);
-    
+
     Route::get('downloadVehiculo-pdf', '\App\Http\controllers\VehiculoController@generar_pdf')->name('descargarVehiculos-pdf');
     // Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
@@ -75,7 +82,7 @@ Route::middleware(['auth', 'Empleado'])->group(function () {
     })->name('CuentaEmpleado');*/
     Route::get('/CuentaEmpleado', [ConductorController::class, 'index'])->name('conductor.index');
     Route::post('/conductor/notificar', [ConductorController::class, 'notificar'])->name('notificar');
-    
+
 });
 Route::middleware(['guest'])->group(function () {
     // Route::view('/conocernos', 'conocernos');

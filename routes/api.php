@@ -15,6 +15,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ViajeController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuditorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,17 @@ use Illuminate\Support\Facades\Route;
     //         return view('cuenta_Admin.indexAdmin', compact('vehiculos'));
     //     })->name('CuentaAdmin');
     //     Route::resource('/vehiculos', VehiculoController::class);
+
+    Route::resource('/auditores', AuditorController::class)->names([
+        'index' => 'api.auditores.index',
+        'show' => 'api.auditores.show',
+        'create' => 'api.auditores.create',
+        'store' => 'api.auditores.store',
+        'edit' => 'api.auditores.edit',
+        'update' => 'api.auditores.update',
+        'destroy' => 'api.auditores.destroy'
+    ]);
+
     Route::resource('/clientes', ClienteController::class)->names([
         'index' => 'api.clientes.index',
         'show' => 'api.clientes.show',

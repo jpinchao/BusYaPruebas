@@ -22,6 +22,7 @@ class RouteServiceProvider extends ServiceProvider
         'Admin' => '/CuentaAdmin',
         'Cliente' => '/CuentaCliente',
         'Empleado' => '/CuentaEmpleado',
+        'Auditor' => '/CuentaAuditor',
     ];
 
     /**

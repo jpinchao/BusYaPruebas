@@ -21,6 +21,7 @@ use App\Http\Controllers\ConductorController;
 use App\Http\Controllers\ClienteController2;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestEmail;
+use App\Http\Controllers\AuditorController;
 
 
 /*
@@ -35,7 +36,6 @@ use App\Mail\TestEmail;
 */
 
 // traer la vista de la pagina principal que esta en la carpeta views/main/index.blade.php
-
 Route::get('/send-test-email', function () {
     Mail::to('auditorjr429@gmail.com')->send(new TestEmail());
     return 'Correo de prueba enviado!';
@@ -84,6 +84,12 @@ Route::middleware(['auth', 'Empleado'])->group(function () {
     Route::post('/conductor/notificar', [ConductorController::class, 'notificar'])->name('notificar');
 
 });
+
+Route::middleware(['auth', 'Auditor'])->group(function () {
+    Route::get('/CuentaAuditor', [AuditorController::class, 'index'])->name('CuentaAuditor');
+});
+
+
 Route::middleware(['guest'])->group(function () {
     // Route::view('/conocernos', 'conocernos');
     // Route::view('/rutas', 'rutas');
